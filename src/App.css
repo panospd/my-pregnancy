@@ -20,3 +20,11 @@
     transform: rotate(360deg);
   }
 }
+
+.my-pregnancy-container {
+    height: 50vh;
+    margin-top: 20vh;
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
