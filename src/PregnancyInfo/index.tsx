@@ -1,13 +1,13 @@
-import { PregnancyProgress } from "../PregnancyInfoForm/PregnancyProgress"
+import { PregnancyDate } from "../PregnancyInfoForm/PregnancyDate"
 
 interface PregnancyInfoProps {
-    progress: PregnancyProgress
+    info: PregnancyDate
 }
 
 function PregnancyInfo(props: PregnancyInfoProps): JSX.Element {
     return (
         <div>
-            {JSON.stringify(props.progress)}
+            {JSON.stringify(props.info.progress())}
         </div>
     ) 
 }

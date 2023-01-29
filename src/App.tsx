@@ -24,7 +24,7 @@ function App() {
                 {
                     !periodDate 
                     ? <PregnancyInfoForm onSubmit={onPregnancyInfoSubmit} /> 
-                    : <PregnancyInfo progress={periodDate!.progress()} />}
+                    : <PregnancyInfo info={periodDate} />}
             </div>
         </div>
     );
