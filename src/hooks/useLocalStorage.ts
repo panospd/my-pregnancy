@@ -6,10 +6,6 @@ function useLocalStorage<T>(
     parse?: (item: string) => T,
     stringify?: (value: T) => string) {
     const [storedvalue, setStoredValue] = useState<T | undefined>(() => {
-        if (typeof window === undefined) {
-            return initialValue;
-        }
-
         const item = localStorage.getItem(key)
 
         if(!item) return initialValue;

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -15,7 +14,7 @@ function DatePick(props: DatePickProps) {
             <div className="input-group-prepend">
                 {props.iconUrl && (
                     <span className="input-group-text" id="basic-addon1">
-                        {<img src={props.iconUrl}></img>}
+                        {<img src={props.iconUrl} alt="icon"></img>}
                         {props.label && <span>{props.label}</span>}
                     </span>
                 )}

@@ -75,8 +75,6 @@ export class PregnancyDate {
     private dateDiffInDays = (a: Date, b: Date) => {
         const aDate = new Date(a.getFullYear(), a.getMonth(), a.getDate(), 0, 0, 0, 0);
         const bDate = new Date(b.getFullYear(), b.getMonth(), b.getDate(), 0, 0, 0, 0);
-        const numberOfDays = Math.floor((bDate.getTime() - aDate.getTime()) / (1000 * 3600 * 24));
-        console.log(numberOfDays)
-        return numberOfDays;
+        return Math.floor((bDate.getTime() - aDate.getTime()) / (1000 * 3600 * 24));
     }
 }

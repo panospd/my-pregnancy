@@ -4,7 +4,6 @@ export class PregnancyProgress {
     constructor(numberOfDays: number) {
         this._week = Math.floor(numberOfDays / 7);
         this._day = numberOfDays - this.week * 7;
-        console.log(numberOfDays)
     }
 
     public get week() {
