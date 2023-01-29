@@ -12,7 +12,7 @@ function PregnancyInfo(props: PregnacyInfoFormProps) {
     const [lastPeriodDate, SetLastPeriodDate] = useState(new Date());
 
     const onClick = () => {
-        props.onSubmit(PregnancyDate.CreateFrom(lastPeriodDate))
+        props.onSubmit(PregnancyDate.createFrom(lastPeriodDate))
     }
 
     return (

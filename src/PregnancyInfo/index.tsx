@@ -1,11 +1,15 @@
-import { PregnancyDate } from "../PregnancyInfoForm/PregnancyDate"
+import { PregnancyProgress } from "../PregnancyInfoForm/PregnancyProgress"
 
 interface PregnancyInfoProps {
-    periodDate: PregnancyDate
+    progress: PregnancyProgress
 }
 
-function PregnancyInfo(props: PregnancyInfoProps) {
-    return <div>{JSON.stringify(props.periodDate)}</div>
+function PregnancyInfo(props: PregnancyInfoProps): JSX.Element {
+    return (
+        <div>
+            {JSON.stringify(props.progress)}
+        </div>
+    ) 
 }
 
 export default PregnancyInfo
