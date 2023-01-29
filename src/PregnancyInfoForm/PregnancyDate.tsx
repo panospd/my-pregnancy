@@ -54,12 +54,7 @@ export class PregnancyDate {
 
     progress(): PregnancyProgress {
         const today = new Date()
-        const daysInDiff = this.dateDiffInDays(
-            this.toDate(), 
-            new Date(
-                today.getFullYear(), 
-                today.getMonth(), 
-                today.getDate(), 0, 0, 0, 0))
+        const daysInDiff = this.dateDiffInDays(this.toDate(), today)
         return new PregnancyProgress(daysInDiff)
     }
 
@@ -78,7 +73,9 @@ export class PregnancyDate {
     }
 
     private dateDiffInDays = (a: Date, b: Date) => {
-        const numberOfDays = (b.getTime() - a.getTime()) / (1000 * 3600 * 24);
+        const aDate = new Date(a.getFullYear(), a.getMonth(), a.getDate(), 0, 0, 0, 0);
+        const bDate = new Date(b.getFullYear(), b.getMonth(), b.getDate(), 0, 0, 0, 0);
+        const numberOfDays = Math.floor((bDate.getTime() - aDate.getTime()) / (1000 * 3600 * 24));
         console.log(numberOfDays)
         return numberOfDays;
     }
