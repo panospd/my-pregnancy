@@ -1,7 +1,7 @@
 import { PregnancyDate } from "../PregnancyInfoForm/PregnancyDate";
 
 interface PregnancyInfoProps {
-    info: PregnancyDate;
+    info: PregnancyDate
 }
 
 function PregnancyInfo(props: PregnancyInfoProps): JSX.Element {
